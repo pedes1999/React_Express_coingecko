@@ -11,11 +11,11 @@ const CryptoDetails = () => {
     const [image, setImage] = useState('')
 
 
-
+    //Fetch a Single Crypto Details from backend
     useEffect(() => {
         const fetchCrypto = () => {
-            axios.get(`https://api.coingecko.com/api/v3/coins/${params.id}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false`).then(res => {
-                console.log(res.data)
+            axios.get(`/coins/${params.id}`).then(res => {
+
                 setCoin(res.data)
                 setImage(res.data.image.small)
                 setLoading(false)

@@ -6,40 +6,37 @@ import CoinCard from '../components/CoinCard'
 import CoinDesc from '../components/CoinDesc'
 import Navbar from '../components/Navbar'
 import ReactPaginate from 'react-paginate'
+import { GrBitcoin } from 'react-icons/gr'
 const Home = () => {
     const [coins, setCoins] = useState([])
     const [loading, setLoading] = useState(true)
 
 
-    //Fetching the first 12 cryptos 
+    //Fetching the first 14 Cryptos Through the Backend
     useEffect(() => {
-        const fetchCrypto = () => {
-            axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=12&page=1&sparkline=false').then(res => {
-
-                setCoins(res.data)
-                setLoading(false)
-
-            }).catch(error => console.log(error))
-
+        const fetchCryptos = async () => {
+            const res = await axios.get('/coins/markets/1')
+            setCoins(res.data)
         }
-        fetchCrypto();
+        fetchCryptos()
         setLoading(false)
     }, [])
 
-    //Fetching the ceypto data for the requested Page
+    //Function to fetch the requested page Cryptos from backend
     const fetchCryptos = async (currentPage) => {
-        setLoading(true)
-        axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=12&page=${currentPage}&sparkline=false`).then(res => {
+
+        axios.get(`/coins/markets/${currentPage}`).then(res => {
             setCoins(res.data)
-            setLoading(false)
         }).catch(error => console.log(error))
 
     }
 
-    //Getting the requested page Number from the handleClick Handler and refetching the next 12 cryptos
+    //Getting the requested page Number from the handleClick Handler and refetching the next 14 cryptos
     const handlePageClick = async (data) => {
+        setLoading(true)
         let currentPage = data.selected + 1;
         await fetchCryptos(currentPage)
+        setLoading(false)
 
     }
 
@@ -50,13 +47,15 @@ const Home = () => {
             {loading ? <Spinner variant='info' animation="border" role="status" className='spinnerStyle'>
                 <span className="visually-hidden">Loading...</span>
             </Spinner> : (
+
                 <div className="coin-app">
-                    <h1 className='intro-h1'>Cryptos Right Now!</h1>
+                    <h1 className='intro-h1'><GrBitcoin style={{ marginBottom: '7px' }} /> Cryptos Right Now!</h1>
                     <CoinDesc />
 
                     {coins.map(coin => (
 
                         <CoinCard
+                            key={coin.id}
                             id={coin.id}
                             name={coin.name}
                             image={coin.image}
@@ -69,8 +68,11 @@ const Home = () => {
                     ))}
 
                 </div>
+
+
             )
             }
+
             <ReactPaginate
                 previousLabel={"Previous"}
                 nextLabel={"Next"}
@@ -89,7 +91,6 @@ const Home = () => {
                 breakLinkClassName={'page-link'}
                 activeClassName={'active'}
             />
-
         </>
     )
 }
