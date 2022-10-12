@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { HiArrowUp, HiArrowDown } from 'react-icons/hi'
 const CoinCardDetails = ({ name,
     currPrice,
