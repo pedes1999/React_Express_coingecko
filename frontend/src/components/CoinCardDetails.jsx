@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { useEffect } from 'react'
+
 import { HiArrowUp, HiArrowDown } from 'react-icons/hi'
 const CoinCardDetails = ({ name,
     currPrice,
@@ -64,8 +63,8 @@ const CoinCardDetails = ({ name,
                             : <div className="text-danger"><HiArrowDown size={40} style={{ marginBottom: '10px' }} />{priceChange7d.toFixed(4)}$</div>}
                     </div>
                     <div className="col-md-4 display-6">
-                        {priceChange24h > 0 ? (<div className="text-success"><HiArrowUp size={40} style={{ marginBottom: '10px' }} />{priceChange24h.toFixed(5)}$</div>)
-                            : <div className="text-danger"><HiArrowDown size={40} style={{ marginBottom: '10px' }} />{priceChange24h.toFixed(4)}$</div>}
+                        {priceChange14d > 0 ? (<div className="text-success"><HiArrowUp size={40} style={{ marginBottom: '10px' }} />{priceChange14d.toFixed(5)}$</div>)
+                            : <div className="text-danger"><HiArrowDown size={40} style={{ marginBottom: '10px' }} />{priceChange14d.toFixed(4)}$</div>}
                     </div>
                 </div>
                 <div className='row  rounded'>

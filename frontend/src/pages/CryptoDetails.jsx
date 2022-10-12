@@ -24,7 +24,7 @@ const CryptoDetails = () => {
         }
         fetchCrypto();
 
-    }, [])
+    }, [params.id])
 
     return (
         <>
