@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: #1a1a1f;
+  color: lightblue;
+}
+
+.coin-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 64px;
+  color: #fff;
+}
+
+.intro-h1 {
+  color: lightblue;
+  padding-bottom: 50px;
+  padding-top: -20px;
+}
+
+.coin-text {
+  margin-bottom: 32px;
+  text-align: center;
+  font-size: 50px;
+  color: cyan;
+}
+
+
+.coin-input::placeholder {
+  color: white;
+}
+
+.coin-container {
+  display: flex;
+  justify-content: center;
+}
+
+.coin-row {
+  display: flex;
+  flex-direction: row;
+  justify-items: start;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid black;
+  width: 900px
+}
+
+.coin {
+  display: flex;
+  align-items: center;
+  padding-right: 24px;
+  min-width: 300px;
+}
+
+.coin img {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px
+}
+
+.coin h1 {
+  font-size: 16px;
+  width: 150px;
+}
+
+
+.coin-symbol {
+  text-transform: uppercase;
+}
+
+.coin-data {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.coin-price {
+  width: 110px
+}
+
+.coin-h-24 {
+  width: 155px;
+}
+
+.coin-l-24 {
+  width: 155px;
+}
+
+.green {
+  color: #11d811;
+}
+
+.red {
+  color: #ff1232;
+}
+
+.desc-symbol {
+  margin-left: 70px;
+}
+
+.desc-price {
+  font-size: 15px;
+  width: 155px;
+  padding-right: 50px;
+  align-items: center;
+}
+
+.desc-h-24 {
+  font-size: 15px;
+  width: 155px;
+  padding-right: 50px;
+  align-items: center;
+}
+
+.desc-l-24 {
+  font-size: 15px;
+  width: 155px;
+  padding-right: 30px;
+  align-items: center;
+}
+
+.pagination {
+  margin-top: 30px;
+}
+
+.coin-info {
+  padding-top: 20px;
+  text-align: start;
+  font-size: 15px;
+  margin: 0;
+}
+
+.crypto-price {
+  font-size: x-large;
+  color: lightblue;
+}
+
+.crypto-desc {
+  margin-top: 10px;
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: lightblue;
+}
+
+.navbar {
+  font-size: xx-large;
+}
+
+.spinnerStyle {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
