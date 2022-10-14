@@ -3,6 +3,10 @@ var request = require("request");
 const app = express();
 const axios = require("axios");
 
+app.use("/", (req, res) => {
+  res.send("Api is Running!!");
+});
+
 app.use("/coins/markets/:id", async (req, res) => {
   axios
     .get(
