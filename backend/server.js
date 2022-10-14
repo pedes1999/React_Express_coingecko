@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const axios = require("axios");
 
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Api is Running!!");
 });
 
@@ -12,7 +12,6 @@ app.use("/coins/markets/:id", async (req, res) => {
       `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=14&page=${req.params.id}&sparkline=false`
     )
     .then((response) => {
-      const { current_price } = response.data[0];
       res.json(response.data);
     })
     .catch((error) => {

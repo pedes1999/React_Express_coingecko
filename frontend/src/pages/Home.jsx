@@ -7,7 +7,6 @@ import CoinDesc from "../components/CoinDesc";
 import Navbar from "../components/Navbar";
 import ReactPaginate from "react-paginate";
 import { GrBitcoin } from "react-icons/gr";
-import { clippingParents } from "@popperjs/core";
 const Home = () => {
   const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -60,7 +59,6 @@ const Home = () => {
             <GrBitcoin style={{ marginBottom: "7px" }} /> Cryptos Right Now!
           </h1>
           <CoinDesc />
-
           {coins.map((coin) => (
             <CoinCard
               key={coin.id}
