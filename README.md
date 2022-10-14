@@ -1,3 +1,9 @@
+Lighweight Full-Stack Crypto Tracker Using :
+React
+Bootstrap
+NodeJs
+ExpressJs
+
 Proof of Work
 ![test1](https://user-images.githubusercontent.com/51210446/195841687-9a0c0102-aa18-4c49-aafd-769f92fcfbf9.png)
 ![test3](https://user-images.githubusercontent.com/51210446/195841873-b5f384a9-b98a-4266-b9de-2906f3642bee.png)
