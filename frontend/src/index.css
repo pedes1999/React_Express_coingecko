@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&display=swap");
 
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   background-color: #1a1a1f;
   color: lightblue;
 }
@@ -30,7 +30,6 @@ body {
   color: cyan;
 }
 
-
 .coin-input::placeholder {
   color: white;
 }
@@ -46,8 +45,8 @@ body {
   justify-items: start;
   align-items: center;
   height: 80px;
-  border-bottom: 1px solid black;
-  width: 900px
+  border-bottom: 2px solid lightblue;
+  width: 900px;
 }
 
 .coin {
@@ -60,14 +59,13 @@ body {
 .coin img {
   height: 30px;
   width: 30px;
-  margin-right: 10px
+  margin-right: 10px;
 }
 
 .coin h1 {
   font-size: 16px;
   width: 150px;
 }
-
 
 .coin-symbol {
   text-transform: uppercase;
@@ -81,7 +79,7 @@ body {
 }
 
 .coin-price {
-  width: 110px
+  width: 110px;
 }
 
 .coin-h-24 {
