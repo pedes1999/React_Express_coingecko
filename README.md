@@ -4,6 +4,15 @@ Bootstrap
 NodeJs
 ExpressJs
 
+How to run:
+i) At the main folder Run :
+   npm install
+ii) At the frontend folder Run :
+  npm install
+iii) At the main folder Run :
+   npm run dev
+
+
 Proof of Work
 
 
